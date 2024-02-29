@@ -55,3 +55,9 @@ Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
 
 // Route::get('/articles/{id}', [PageController::class, 'articles']);
 Route::get('/articles/{id}', [AboutController::class, 'articles']);
+
+Route::get('/greeting', function (){
+    return view('blog.hello')
+    ->with('name','Andi')
+    ->with('occupation','Astronaut');
+});
